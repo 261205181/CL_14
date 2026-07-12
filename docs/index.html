@@ -43,7 +43,7 @@
     .blue-4 { top: 220px; left: 680px; }
     .blue-5 { top: 260px; left: 750px; }
     
-    .butt{
+    .butterfly {
       z-index: 4;
       transition: all 0.5s ease;
     }
@@ -56,16 +56,48 @@
   <body>
     <div class = "photo">
       <img class="bg-back" width="960" height="534" alt="bg0" src="https://github.com/user-attachments/assets/75d6e913-84db-4d62-98f4-51804d81a970" />
-      
+      <img class ="bg-front" src="https://github.com/261205181/CL_14/blob/main/docs/bg1.png?raw=true" width="960" height="534" alt"bg1" />
       <p>ぽかぽか陽気の穏やかな朝<br>花畑では、蝶がのんびり飛んでいます</p>
-      <img class="chara blue-1" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
-      <img class="chara blue-2" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
-      <img class="chara blue-3" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
-      <img class="chara blue-4" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
-      <img class="chara blue-5" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
-      <img class="chara bf-1" src="https://github.com/261205181/CL_14/blob/main/docs/butterfly.gif?raw=true" width="100">
-      <img class="chara bf-2" src="https://github.com/261205181/CL_14/blob/main/docs/butterfly.gif?raw=true" width="100">
-      <img class="chara bf-3" src="https://github.com/261205181/CL_14/blob/main/docs/butterfly.gif?raw=true" width="100">
+      <img class="chara blue-1" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50" onmouseover="escapeBlue(this)">
+      <img class="chara blue-2" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50" onmouseover="escapeBlue(this)">
+      <img class="chara blue-3" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50" onmouseover="escapeBlue(this)">
+      <img class="chara blue-4" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50" onmouseover="escapeBlue(this)">
+      <img class="chara blue-5" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50" onmouseover="escapeBlue(this)">
+      <img class="chara bf-1" src="https://github.com/261205181/CL_14/blob/main/docs/butterfly.gif?raw=true" width="100"onmouseover="escapeButterfly(this)">
+      <img class="chara bf-2" src="https://github.com/261205181/CL_14/blob/main/docs/butterfly.gif?raw=true" width="100"onmouseover="escapeButterfly(this)">
+      <img class="chara bf-3" src="https://github.com/261205181/CL_14/blob/main/docs/butterfly.gif?raw=true" width="100"onmouseover="escapeButterfly(this)">
     </div>
+    <script>
+    
+    function escapeBlue(element) {
+      
+      var minX = 360;
+      var maxX = 800;
+      var minY = 190;
+      var maxY = 290;
+
+      
+      var newX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+      var newY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+
+      
+      element.style.left = newX + "px";
+      element.style.top = newY + "px";
+    }
+
+    function escapeButterfly(element) {
+      
+      var minX = 50;
+      var maxX = 850;
+      var minY = 100;
+      var maxY = 430;
+
+      var newX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+      var newY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+
+      element.style.left = newX + "px";
+      element.style.top = newY + "px";
+    }
+  </script>
   </body>
 </html>
