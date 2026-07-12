@@ -6,7 +6,16 @@
     .photo{
       position: relative;
       width: 960px;
+      height: 534px;
+      overflow: hidden;
     }
+    .photo img, .photo p{
+      position:
+      absolute;
+    }
+
+    .bg-back{ top: 0; left: 0; z-index: 1; }
+    .bbg front { top: 0; left: 0; z-index: 3; }
 
     .photo p{
       position: absolute;
@@ -17,26 +26,37 @@
       padding: 5px;
       border-radius: 4px;
       font-size:24px;
+      margin: 0;
+      z-index: 5;
     }
-    .chara{
-      position: absolute;
+    
+    .butt{
+      z-index: 4;
+      transition: all 0.5s ease;
     }
-
-    .blue-1 { top: 400px; left: 80px; }
-    .blue-2 { top: 430px; left: 160px; }
-    .blue-3 { top: 390px; left: 240px; }
-    .blue-4 { top: 420px; left: 320px; }
-    .blue-5 { top: 400px; left: 400px; }
-
-    .bf-1 { top: 150px; left: 520px; }
-    .bf-2 { top: 260px; left: 680px; }
-    .bf-3 { top: 180px; left: 800px; }
+    .blue-chara {
+      z-index: 2; 
+      transition: all 0.4s ease;
+    .blue-1 { top: 210px; left: 380px; }
+    .blue-2 { top: 270px; left: 450px; }
+    .blue-3 { top: 250px; left: 550px; }
+    .blue-4 { top: 220px; left: 680px; }
+    .blue-5 { top: 260px; left: 750px; }
+    
+    .butt{
+      z-index: 4;
+      transition: all 0.5s ease;
+    }
+    .bf-1 { top: 380px; left: 200px; }
+    .bf-2 { top: 400px; left: 500px; }
+    .bf-3 { top: 420px; left: 650px; }
       
   </style>
   </head>
   <body>
     <div class = "photo">
-      <img width="960" height="534" alt="bg0" src="https://github.com/user-attachments/assets/75d6e913-84db-4d62-98f4-51804d81a970" />
+      <img class="bg-back" width="960" height="534" alt="bg0" src="https://github.com/user-attachments/assets/75d6e913-84db-4d62-98f4-51804d81a970" />
+      
       <p>ぽかぽか陽気の穏やかな朝<br>花畑では、蝶がのんびり飛んでいます</p>
       <img class="chara blue-1" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
       <img class="chara blue-2" src="https://raw.githubusercontent.com/261205181/CL_14/refs/heads/main/docs/foo.gif" width="50">
